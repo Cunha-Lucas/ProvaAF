@@ -1,0 +1,23 @@
+### Listar Alunos
+GET http://localhost:5083/alunos/listar
+
+### Cadastrar os Alunos
+POST http://localhost:5083/alunos/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Oliveira",
+    "sobrenome": "Oliveira"
+}
+
+### Cadastrar IMC
+POST http://localhost:5083/imc/cadastrar/3
+Content-Type: application/json
+
+{
+    "Altura": 1.82,
+    "Peso": 90
+}
+
+### Listar IMC por Aluno
+GET http://localhost:5083/imc/listar
