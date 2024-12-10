@@ -21,3 +21,14 @@ Content-Type: application/json
 
 ### Listar IMC por Aluno
 GET http://localhost:5083/imc/listar
+
+### Alterar IMC 
+POST http://localhost:5083/imc/alterar
+Content-Type: application/json
+
+{
+    "ImcID": 2,
+    "peso": 50,
+    "altura": 1.80
+}
+

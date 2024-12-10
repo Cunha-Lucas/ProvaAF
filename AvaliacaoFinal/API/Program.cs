@@ -89,7 +89,7 @@ app.MapGet("/imc/listar", ([FromServices] AppDataContext ctx) =>
 });
 
 //Alterar IMC
-app.MapGet("imc/listar/{id}", ([FromServices] AppDataContext ctx, int id) =>
+app.MapPost("imc/alterar", ([FromServices] AppDataContext ctx, [FromBody] int id) =>
 {
     var aluno = ctx.Aluno.Find(id);
     if (aluno is null) {
@@ -114,6 +114,7 @@ app.MapGet("imc/listar/{id}", ([FromServices] AppDataContext ctx, int id) =>
 
     return Results.Ok(imcs);
 });
+
 
 
 app.UseCors("Acesso Total");
